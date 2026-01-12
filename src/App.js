@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -22,12 +22,12 @@ import './styles/responsive.css';
 
 const AppContent = () => {
   const location = useLocation();
-  const hideHeaderFooter = location.pathname === '/login' || 
-                          location.pathname.startsWith('/login/') ||
-                          location.pathname === '/register' ||
-                          location.pathname.startsWith('/admin') ||
-                          location.pathname.startsWith('/staff') ||
-                          location.pathname.startsWith('/user');
+  const hideHeaderFooter = location.pathname === '/login' ||
+    location.pathname.startsWith('/login/') ||
+    location.pathname === '/register' ||
+    location.pathname.startsWith('/admin') ||
+    location.pathname.startsWith('/staff') ||
+    location.pathname.startsWith('/user');
 
   return (
     <div className="App">
