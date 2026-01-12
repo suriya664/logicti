@@ -9,7 +9,6 @@ import About from './pages/About';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import TrackShipment from './pages/TrackShipment';
-import Login from './pages/Login';
 import AdminLogin from './pages/AdminLogin';
 import UserLogin from './pages/UserLogin';
 import StaffLogin from './pages/StaffLogin';

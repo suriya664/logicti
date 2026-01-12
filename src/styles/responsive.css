@@ -11,6 +11,161 @@
     overflow-x: hidden;
   }
 
+  /* About Page - Tablet View Fixes */
+  .page-about {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+  .about-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+  .about-main-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  .about-image-section {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .about-image-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 2rem 0;
+    box-sizing: border-box;
+  }
+
+  .about-grid-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-top: 2rem;
+    box-sizing: border-box;
+  }
+
+  .value-item {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    overflow: visible;
+    display: grid;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.4;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .page-header {
+    width: 100%;
+    max-width: 100%;
+    padding: 3rem 1rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .page-title,
+  .page-subtitle {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   .header-container {
     padding: 0 1rem;
     position: relative;
@@ -210,6 +365,128 @@
   .footer-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
+  }
+}
+
+/* ============================================
+   Tablet Portrait Specific (800px - 900px)
+   ============================================ */
+@media (min-width: 800px) and (max-width: 900px) {
+  .page-about {
+    padding-bottom: 3rem;
+  }
+
+  .about-content {
+    padding: 0 1.5rem;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+  .about-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-main-image {
+    max-height: 400px;
+  }
+
+  .about-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    overflow: visible;
+    display: grid;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.4;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+    overflow-x: visible;
+  }
+
+  .section-divider {
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-image-item {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .about-image-title {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .value-title,
+  .value-text {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+  }
+
+  .section-title {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
   }
 }
 
