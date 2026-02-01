@@ -46,10 +46,6 @@ const AdminDashboard = () => {
   return (
     <DashboardLayout userType="admin">
       <div className="dashboard-page">
-        <div className="page-header">
-          <h1 className="page-title">Admin Dashboard</h1>
-          <p className="page-subtitle">Overview of your logistics operations</p>
-        </div>
 
         {/* Stats Cards */}
         <div className="stats-grid">

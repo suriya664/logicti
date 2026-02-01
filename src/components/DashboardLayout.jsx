@@ -2,12 +2,27 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../styles/dashboard.css';
 
-const DashboardLayout = ({ children, userType = 'user' }) => {
+const DashboardLayout = ({ children, userType = 'user', pageTitle, pageSubtitle }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   const isActive = (path) => location.pathname === path;
+
+  // Get page title based on current route
+  const getPageTitle = () => {
+    if (pageTitle) return { title: pageTitle, subtitle: pageSubtitle };
+    
+    const pathTitles = {
+      '/admin/dashboard': { title: 'Admin Dashboard', subtitle: 'Overview of your logistics operations' },
+      '/staff/dashboard': { title: 'Staff Dashboard', subtitle: 'Manage your deliveries and tasks' },
+      '/user/dashboard': { title: 'User Dashboard', subtitle: 'Track your orders and shipments' },
+    };
+    
+    return pathTitles[location.pathname] || { title: 'Dashboard', subtitle: '' };
+  };
+
+  const { title: currentPageTitle, subtitle: currentPageSubtitle } = getPageTitle();
 
   const adminMenuItems = [
     { path: '/admin/dashboard', label: 'Dashboard', icon: '📊' },
@@ -50,7 +65,6 @@ const DashboardLayout = ({ children, userType = 'user' }) => {
         <div className="sidebar-header">
           <Link to="/" className="sidebar-logo">
             <span className="logo-text">TrackPulse</span>
-            <span className="logo-subtext">Logistics</span>
           </Link>
           <button 
             className="sidebar-close"
@@ -76,10 +90,10 @@ const DashboardLayout = ({ children, userType = 'user' }) => {
         </nav>
 
         <div className="sidebar-footer">
-          <button className="logout-btn" onClick={handleLogout}>
-            <span className="nav-icon">🚪</span>
+          <Link to="/" className="sidebar-nav-item logout-btn" onClick={handleLogout}>
+            <span className="nav-icon">⚡</span>
             <span className="nav-label">Logout</span>
-          </button>
+          </Link>
         </div>
       </aside>
 
@@ -96,6 +110,12 @@ const DashboardLayout = ({ children, userType = 'user' }) => {
             <span></span>
             <span></span>
           </button>
+
+          {/* Page Heading */}
+          <div className="page-heading">
+            <h1 className="page-title">{currentPageTitle}</h1>
+            {currentPageSubtitle && <p className="page-subtitle">{currentPageSubtitle}</p>}
+          </div>
 
           <div className="header-search">
             <input 

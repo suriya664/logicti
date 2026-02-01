@@ -486,7 +486,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  border: none;
+  border: 2px solid transparent;
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
@@ -494,6 +494,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .btn-primary {
@@ -524,6 +525,52 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--molten-copper);
   border-color: var(--molten-copper);
   box-shadow: 0 0 20px rgba(181, 90, 58, 0.3);
+}
+
+/* ============================================
+   Responsive Button Styles
+   ============================================ */
+
+/* Tablet breakpoint (768px) */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.875rem 2rem;
+    font-size: 0.95rem;
+    min-height: 48px;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  .hero-cta {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Mobile breakpoint (360px) */
+@media (max-width: 360px) {
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  
+  .hero-cta {
+    gap: 0.75rem;
+  }
+  
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 240px;
+  }
 }
 
 /* ============================================

@@ -27,10 +27,6 @@ const StaffDashboard = () => {
   return (
     <DashboardLayout userType="staff">
       <div className="dashboard-page">
-        <div className="page-header">
-          <h1 className="page-title">Staff Dashboard</h1>
-          <p className="page-subtitle">Manage your deliveries and tasks</p>
-        </div>
 
         {/* Stats Cards */}
         <div className="stats-grid">

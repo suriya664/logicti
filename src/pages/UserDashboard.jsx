@@ -43,12 +43,8 @@ const UserDashboard = () => {
   ];
 
   return (
-    <DashboardLayout userType="user">
+    <DashboardLayout userType="user" pageTitle="User" pageSubtitle="Track your orders and shipments">
       <div className="dashboard-page">
-        <div className="page-header">
-          <h1 className="page-title">My Dashboard</h1>
-          <p className="page-subtitle">Track your orders and shipments</p>
-        </div>
 
         {/* Stats Cards */}
         <div className="stats-grid">
